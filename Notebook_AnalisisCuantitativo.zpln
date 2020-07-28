@@ -3,20 +3,20 @@
     {
       "text": "%md\n<H1 align=\"center\">Análisis de los Datos Numéricos</H1>",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27T21:03:58-0500",
+      "dateUpdated": "2020-07-28T08:28:12-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "text",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/text",
-        "editorHide": true
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -34,33 +34,31 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595900194410_131763145",
+      "jobName": "paragraph_1595941252330_832450732",
       "id": "paragraph_1595900194410_131763145",
-      "dateCreated": "2020-07-27T20:36:34-0500",
-      "dateStarted": "2020-07-27T20:42:40-0500",
-      "dateFinished": "2020-07-27T20:42:40-0500",
-      "status": "FINISHED",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
       "focus": true,
-      "$$hashKey": "object:298"
+      "$$hashKey": "object:28"
     },
     {
       "title": "Creación de Esquema",
       "text": "import org.apache.spark.sql.types._\nimport org.apache.spark.sql.functions._\nval myDataSchema = StructType(\n  Array(\n    StructField(\"id\",DecimalType(26, 0),true),\n    StructField(\"anio\",IntegerType,true),\n    StructField(\"mes\",IntegerType,true),\n    StructField(\"provincia\",IntegerType,true),\n    StructField(\"canton\",IntegerType,true),\n    StructField(\"area\",StringType,true),\n    StructField(\"genero\",StringType,true),\n    StructField(\"edad\",IntegerType,true),\n    StructField(\"estado_civil\",StringType,true),\n    StructField(\"nivel_de_instruccion\",StringType,true),\n    StructField(\"etnia\",StringType,true),\n    StructField(\"ingreso_laboral\",IntegerType,true),\n    StructField(\"condicion_actividad\",StringType,true),\n    StructField(\"sectorizacion\",StringType,true),\n    StructField(\"grupo_ocupacion\",StringType,true),\n    StructField(\"rama_actividad\",StringType,true),\n    StructField(\"factor_expansion\",DoubleType,true)\n  ));",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27T20:58:24-0500",
+      "dateUpdated": "2020-07-28T08:03:39-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -78,32 +76,30 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595900499006_-1644961829",
+      "jobName": "paragraph_1595941252334_649289561",
       "id": "paragraph_1595900499006_-1644961829",
-      "dateCreated": "2020-07-27T20:41:39-0500",
-      "dateStarted": "2020-07-27T20:58:24-0500",
-      "dateFinished": "2020-07-27T20:58:25-0500",
-      "status": "FINISHED",
-      "$$hashKey": "object:299"
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:29"
     },
     {
       "title": "Lectura de CSV",
       "text": "val data = spark\n\t  .read\n\t  .option(\"inferSchema\",\"true\")\n\t  .option(\"header\",\"true\")\n\t  .option(\"delimiter\",\",\")\n\t  .csv(\"/home/davisalex22/Practicum/Datos_ENEMDU_PEA_v2.csv\")",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27T21:02:35-0500",
+      "dateUpdated": "2020-07-28T08:04:10-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -119,51 +115,31 @@
         ]
       },
       "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=29",
-              "$$hashKey": "object:1898"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=30",
-              "$$hashKey": "object:1899"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595900618121_-1392845110",
+      "jobName": "paragraph_1595941252334_-233246047",
       "id": "paragraph_1595900618121_-1392845110",
-      "dateCreated": "2020-07-27T20:43:38-0500",
-      "dateStarted": "2020-07-27T21:02:35-0500",
-      "dateFinished": "2020-07-27T21:02:39-0500",
-      "status": "FINISHED",
-      "$$hashKey": "object:300"
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:30"
     },
     {
       "text": "%md\n<H2 align= \"center\" >Desviación Estándar</H2>",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27T21:06:31-0500",
+      "dateUpdated": "2020-07-28T08:06:38-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "text",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/text",
-        "editorHide": true
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -181,32 +157,30 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595900723426_246262219",
+      "jobName": "paragraph_1595941252335_1960913148",
       "id": "paragraph_1595900723426_246262219",
-      "dateCreated": "2020-07-27T20:45:23-0500",
-      "dateStarted": "2020-07-27T21:04:06-0500",
-      "dateFinished": "2020-07-27T21:04:07-0500",
-      "status": "FINISHED",
-      "$$hashKey": "object:301"
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:31"
     },
     {
       "title": "Análisis General Basado en la columna ingreso_laboral",
       "text": "val dfIngresoLaboral = data.select(\"ingreso_laboral\").where($\"ingreso_laboral\".isNotNull)\ndfIngresoLaboral.count",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27T21:02:57-0500",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -222,97 +196,37 @@
         ]
       },
       "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=31",
-              "$$hashKey": "object:1953"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595900852538_1982585457",
+      "jobName": "paragraph_1595941252335_-1905092388",
       "id": "paragraph_1595900852538_1982585457",
-      "dateCreated": "2020-07-27T20:47:32-0500",
-      "dateStarted": "2020-07-27T21:02:40-0500",
-      "dateFinished": "2020-07-27T21:02:43-0500",
-      "status": "FINISHED",
-      "$$hashKey": "object:302"
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:32"
     },
     {
+      "title": "Desviación estándar",
+      "text": "val cantValoresEnDifRangos = scala.collection.mutable.ListBuffer[Long]()\nval minValue = 0.0\nval maxValue = 146030\nval bins = 5.0\nval range = (maxValue - minValue) / bins\nvar minCounter = minValue\nvar maxCounter = range\nwhile(minCounter < maxValue){\n    val valoresEnUnRango = dfIngresoLaboral.where($\"ingreso_laboral\".between(minCounter,maxCounter))\n    cantValoresEnDifRangos.+=(valoresEnUnRango.count())\n    minCounter = maxCounter\n    maxCounter = maxCounter + range\n}\nprintln(\"Valores en diferentes rangos:\")\ncantValoresEnDifRangos.foreach(println)\nval avg = dfIngresoLaboral.select(mean(\"ingreso_laboral\"))\n    .first()(0).asInstanceOf[Double]",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=32",
-              "$$hashKey": "object:2148"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=33",
-              "$$hashKey": "object:2149"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=34",
-              "$$hashKey": "object:2150"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=35",
-              "$$hashKey": "object:2151"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=36",
-              "$$hashKey": "object:2152"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=37",
-              "$$hashKey": "object:2153"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595900897853_-1115354777",
-      "id": "paragraph_1595900897853_-1115354777",
-      "dateCreated": "2020-07-27T20:48:17-0500",
-      "status": "FINISHED",
-      "$$hashKey": "object:303",
-      "text": "val cantValoresEnDifRangos = scala.collection.mutable.ListBuffer[Long]()\nval minValue = 0.0\nval maxValue = 146030\nval bins = 5.0\nval range = (maxValue - minValue) / bins\nvar minCounter = minValue\nvar maxCounter = range\nwhile(minCounter < maxValue){\n    val valoresEnUnRango = dfIngresoLaboral.where($\"ingreso_laboral\".between(minCounter,maxCounter))\n    cantValoresEnDifRangos.+=(valoresEnUnRango.count())\n    minCounter = maxCounter\n    maxCounter = maxCounter + range\n}\nprintln(\"Valores en diferentes rangos:\")\ncantValoresEnDifRangos.foreach(println)\nval avg = dfIngresoLaboral.select(mean(\"ingreso_laboral\"))\n    .first()(0).asInstanceOf[Double]",
-      "dateUpdated": "2020-07-27T21:04:16-0500",
-      "dateFinished": "2020-07-27T21:04:29-0500",
-      "dateStarted": "2020-07-27T21:04:16-0500",
-      "title": "Desviación estándar",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -321,56 +235,39 @@
             "data": "Valores en diferentes rangos:\n504714\n18\n7\n1\n2\n\u001b[1m\u001b[34mcantValoresEnDifRangos\u001b[0m: \u001b[1m\u001b[32mscala.collection.mutable.ListBuffer[Long]\u001b[0m = ListBuffer(504714, 18, 7, 1, 2)\n\u001b[1m\u001b[34mminValue\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 0.0\n\u001b[1m\u001b[34mmaxValue\u001b[0m: \u001b[1m\u001b[32mInt\u001b[0m = 146030\n\u001b[1m\u001b[34mbins\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 5.0\n\u001b[1m\u001b[34mrange\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 29206.0\n\u001b[1m\u001b[34mminCounter\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 146030.0\n\u001b[1m\u001b[34mmaxCounter\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 175236.0\n\u001b[1m\u001b[34mavg\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 487.10984027483346\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252335_1903140567",
+      "id": "paragraph_1595900897853_-1115354777",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:33"
     },
     {
+      "title": "Cálculo de la Desviación estándar",
+      "text": "val stdDesv = dfIngresoLaboral.select(stddev(\"ingreso_laboral\"))\n    .first()(0).asInstanceOf[Double]",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=38",
-              "$$hashKey": "object:2292"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595901260686_-1327265032",
-      "id": "paragraph_1595901260686_-1327265032",
-      "dateCreated": "2020-07-27T20:54:20-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:1142",
-      "text": "val stdDesv = dfIngresoLaboral.select(stddev(\"ingreso_laboral\"))\n    .first()(0).asInstanceOf[Double]",
-      "dateUpdated": "2020-07-27T21:04:50-0500",
-      "dateFinished": "2020-07-27T21:04:52-0500",
-      "dateStarted": "2020-07-27T21:04:50-0500",
-      "title": "Cálculo de la Desviación estándar",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -379,42 +276,39 @@
             "data": "\u001b[1m\u001b[34mstdDesv\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 767.7250086176323\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252336_-635481902",
+      "id": "paragraph_1595901260686_-1327265032",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:34"
     },
     {
+      "title": "Cálculo de límites",
+      "text": "val inferior = avg - 3 * stdDesv\nval superior = avg + 3 * stdDesv",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595901890307_-1175475661",
-      "id": "paragraph_1595901890307_-1175475661",
-      "dateCreated": "2020-07-27T21:04:50-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:2189",
-      "text": "val inferior = avg - 3 * stdDesv\nval superior = avg + 3 * stdDesv",
-      "dateUpdated": "2020-07-27T21:05:16-0500",
-      "dateFinished": "2020-07-27T21:05:17-0500",
-      "dateStarted": "2020-07-27T21:05:16-0500",
-      "title": "Cálculo de límites",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -423,68 +317,39 @@
             "data": "\u001b[1m\u001b[34minferior\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = -1816.0651855780634\n\u001b[1m\u001b[34msuperior\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 2790.2848661277303\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252336_-335683399",
+      "id": "paragraph_1595901890307_-1175475661",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:35"
     },
     {
+      "title": "Filtrar",
+      "text": "val valoresMenoresLInferior = dfIngresoLaboral.where($\"ingreso_laboral\" < inferior)\nvaloresMenoresLInferior.describe().show\n\nval valoresMayoresLSuperior = dfIngresoLaboral.where($\"ingreso_laboral\" > superior)\nvaloresMayoresLSuperior.describe().show\n\nvaloresMayoresLSuperior.orderBy($\"ingreso_laboral\".desc).show\n\nval dataSinOutliertsStdDev = dfIngresoLaboral.where($\"ingreso_laboral\" > inferior && $\"ingreso_laboral\" < superior)\ndataSinOutliertsStdDev.select(\"ingreso_laboral\").summary().show",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=39",
-              "$$hashKey": "object:2584"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=40",
-              "$$hashKey": "object:2585"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=41",
-              "$$hashKey": "object:2586"
-            },
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=42",
-              "$$hashKey": "object:2587"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595901916920_1913247104",
-      "id": "paragraph_1595901916920_1913247104",
-      "dateCreated": "2020-07-27T21:05:16-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:2326",
-      "text": "val valoresMenoresLInferior = dfIngresoLaboral.where($\"ingreso_laboral\" < inferior)\nvaloresMenoresLInferior.describe().show\n\nval valoresMayoresLSuperior = dfIngresoLaboral.where($\"ingreso_laboral\" > superior)\nvaloresMayoresLSuperior.describe().show\n\nvaloresMayoresLSuperior.orderBy($\"ingreso_laboral\".desc).show\n\nval dataSinOutliertsStdDev = dfIngresoLaboral.where($\"ingreso_laboral\" > inferior && $\"ingreso_laboral\" < superior)\ndataSinOutliertsStdDev.select(\"ingreso_laboral\").summary().show",
-      "dateUpdated": "2020-07-27T21:05:52-0500",
-      "dateFinished": "2020-07-27T21:06:03-0500",
-      "dateStarted": "2020-07-27T21:05:52-0500",
-      "title": "Filtrar",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -493,41 +358,38 @@
             "data": "+-------+---------------+\n|summary|ingreso_laboral|\n+-------+---------------+\n|  count|              0|\n|   mean|           null|\n| stddev|           null|\n|    min|           null|\n|    max|           null|\n+-------+---------------+\n\n+-------+------------------+\n|summary|   ingreso_laboral|\n+-------+------------------+\n|  count|              4780|\n|   mean|4656.4282426778245|\n| stddev|5222.9384211051565|\n|    min|              2792|\n|    max|            146030|\n+-------+------------------+\n\n+---------------+\n|ingreso_laboral|\n+---------------+\n|         146030|\n|         120000|\n|         100000|\n|          83000|\n|          82200|\n|          81352|\n|          80000|\n|          70000|\n|          60504|\n|          60000|\n|          55000|\n|          55000|\n|          50000|\n|          49800|\n|          45000|\n|          44234|\n|          40000|\n|          38500|\n|          34330|\n|          33300|\n+---------------+\nonly showing top 20 rows\n\n+-------+-----------------+\n|summary|  ingreso_laboral|\n+-------+-----------------+\n|  count|           499962|\n|   mean|447.2481268576412|\n| stddev|408.0410531341489|\n|    min|                0|\n|    25%|              168|\n|    50%|              363|\n|    75%|              572|\n|    max|             2790|\n+-------+-----------------+\n\n\u001b[1m\u001b[34mvaloresMenoresLInferior\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [ingreso_laboral: int]\n\u001b[1m\u001b[34mvaloresMayoresLSuperior\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [ingreso_laboral: int]\n\u001b[1m\u001b[34mdataSinOutliertsStdDev\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [ingreso_laboral: int]\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252336_1738269509",
+      "id": "paragraph_1595901916920_1913247104",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:36"
     },
     {
+      "text": "%md\n<H2 align= \"center\" >Cálculo de Cuartiles</H2>",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "text",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/text",
-        "editorHide": true
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595901952643_-120205312",
-      "id": "paragraph_1595901952643_-120205312",
-      "dateCreated": "2020-07-27T21:05:52-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:2438",
-      "text": "%md\n<H2 align= \"center\" >Cálculo de Cuartiles</H2>",
-      "dateUpdated": "2020-07-27T21:12:41-0500",
-      "dateFinished": "2020-07-27T21:07:03-0500",
-      "dateStarted": "2020-07-27T21:07:03-0500",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -536,56 +398,39 @@
             "data": "<div class=\"markdown-body\">\n<H2 align= \"center\" >Cálculo de Cuartiles</H2>\n\n</div>"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252337_-436035031",
+      "id": "paragraph_1595901952643_-120205312",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:37"
     },
     {
+      "title": "Obtener cuartiles",
       "text": "data.select(\"ingreso_laboral\").summary().show",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27T21:07:40-0500",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
-          "language": "text",
+          "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/text",
-        "title": true
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=43",
-              "$$hashKey": "object:2867"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902023014_-748830514",
-      "id": "paragraph_1595902023014_-748830514",
-      "dateCreated": "2020-07-27T21:07:03-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:2639",
-      "dateFinished": "2020-07-27T21:07:43-0500",
-      "dateStarted": "2020-07-27T21:07:40-0500",
-      "title": "Obtener cuartiles",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -594,56 +439,39 @@
             "data": "+-------+------------------+\n|summary|   ingreso_laboral|\n+-------+------------------+\n|  count|            504742|\n|   mean|487.10984027483346|\n| stddev| 767.7250086176323|\n|    min|                 0|\n|    25%|               170|\n|    50%|               370|\n|    75%|               588|\n|    max|            146030|\n+-------+------------------+\n\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252337_1314289883",
+      "id": "paragraph_1595902023014_-748830514",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:38"
     },
     {
+      "title": "Cuartiles",
+      "text": "val cuartiles = dfIngresoLaboral.stat.approxQuantile(\"ingreso_laboral\", Array(0.25,0.50,0.75), 0.0)\nval q1 = cuartiles(0)\nval q2 = cuartiles(1)\nval q3 = cuartiles(2)",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=44",
-              "$$hashKey": "object:3003"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902060761_13126879",
-      "id": "paragraph_1595902060761_13126879",
-      "dateCreated": "2020-07-27T21:07:40-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:2766",
-      "text": "val cuartiles = dfIngresoLaboral.stat.approxQuantile(\"ingreso_laboral\", Array(0.25,0.50,0.75), 0.0)\nval q1 = cuartiles(0)\nval q2 = cuartiles(1)\nval q3 = cuartiles(2)",
-      "dateUpdated": "2020-07-27T21:08:23-0500",
-      "dateFinished": "2020-07-27T21:08:28-0500",
-      "dateStarted": "2020-07-27T21:08:23-0500",
-      "title": "Cuartiles",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -652,42 +480,39 @@
             "data": "\u001b[1m\u001b[34mcuartiles\u001b[0m: \u001b[1m\u001b[32mArray[Double]\u001b[0m = Array(170.0, 370.0, 588.0)\n\u001b[1m\u001b[34mq1\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 170.0\n\u001b[1m\u001b[34mq2\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 370.0\n\u001b[1m\u001b[34mq3\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 588.0\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252337_946704592",
+      "id": "paragraph_1595902060761_13126879",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:39"
     },
     {
+      "title": "Cálculo de rango intercuartil y límites",
+      "text": "// Calcular rango intercuartil\nval iqr = q3 -q1\n// Calcular los límites\nval inferiorIQR = q1 - 1.5 * iqr\nval superiorIQR = q3 + 1.5 * iqr",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/scala",
-        "title": true
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902103758_-2111263409",
-      "id": "paragraph_1595902103758_-2111263409",
-      "dateCreated": "2020-07-27T21:08:23-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:2898",
-      "text": "// Calcular rango intercuartil\nval iqr = q3 -q1\n// Calcular los límites\nval inferiorIQR = q1 - 1.5 * iqr\nval superiorIQR = q3 + 1.5 * iqr",
-      "dateUpdated": "2020-07-27T21:09:27-0500",
-      "dateFinished": "2020-07-27T21:09:27-0500",
-      "dateStarted": "2020-07-27T21:09:27-0500",
-      "title": "Cálculo de rango intercuartil y límites",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -696,54 +521,37 @@
             "data": "\u001b[1m\u001b[34miqr\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 418.0\n\u001b[1m\u001b[34minferiorIQR\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = -457.0\n\u001b[1m\u001b[34msuperiorIQR\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 1215.0\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252338_192198106",
+      "id": "paragraph_1595902103758_-2111263409",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:40"
     },
     {
+      "text": "val valoresMenoresInferiorIqr = dfIngresoLaboral.where($\"ingreso_laboral\" < inferiorIQR)\nvaloresMenoresInferiorIqr.summary().show",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=48",
-              "$$hashKey": "object:3560"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902167062_1123574561",
-      "id": "paragraph_1595902167062_1123574561",
-      "dateCreated": "2020-07-27T21:09:27-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:3027",
-      "text": "val valoresMenoresInferiorIqr = dfIngresoLaboral.where($\"ingreso_laboral\" < inferiorIQR)\nvaloresMenoresInferiorIqr.summary().show",
-      "dateUpdated": "2020-07-27T21:11:42-0500",
-      "dateFinished": "2020-07-27T21:11:45-0500",
-      "dateStarted": "2020-07-27T21:11:42-0500",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -752,54 +560,37 @@
             "data": "+-------+---------------+\n|summary|ingreso_laboral|\n+-------+---------------+\n|  count|              0|\n|   mean|           null|\n| stddev|           null|\n|    min|           null|\n|    25%|           null|\n|    50%|           null|\n|    75%|           null|\n|    max|           null|\n+-------+---------------+\n\n\u001b[1m\u001b[34mvaloresMenoresInferiorIqr\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [ingreso_laboral: int]\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252338_746743116",
+      "id": "paragraph_1595902167062_1123574561",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:41"
     },
     {
+      "text": "val valoresMayoresSuperiorIqr = dfIngresoLaboral.where($\"ingreso_laboral\" > superiorIQR)\nvaloresMayoresSuperiorIqr.summary().show",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=47",
-              "$$hashKey": "object:3519"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902199279_1087226309",
-      "id": "paragraph_1595902199279_1087226309",
-      "dateCreated": "2020-07-27T21:09:59-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:3130",
-      "text": "val valoresMayoresSuperiorIqr = dfIngresoLaboral.where($\"ingreso_laboral\" > superiorIQR)\nvaloresMayoresSuperiorIqr.summary().show",
-      "dateUpdated": "2020-07-27T21:11:29-0500",
-      "dateFinished": "2020-07-27T21:11:31-0500",
-      "dateStarted": "2020-07-27T21:11:29-0500",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -808,54 +599,37 @@
             "data": "+-------+------------------+\n|summary|   ingreso_laboral|\n+-------+------------------+\n|  count|             31762|\n|   mean|2123.6617026635604|\n| stddev|  2316.73541621819|\n|    min|              1216|\n|    25%|              1399|\n|    50%|              1655|\n|    75%|              2200|\n|    max|            146030|\n+-------+------------------+\n\n\u001b[1m\u001b[34mvaloresMayoresSuperiorIqr\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [ingreso_laboral: int]\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252339_453884640",
+      "id": "paragraph_1595902199279_1087226309",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:42"
     },
     {
+      "text": "val dataSinOutliertsIQR = dfIngresoLaboral.where($\"ingreso_laboral\" > inferiorIQR && $\"ingreso_laboral\" < superiorIQR)\ndataSinOutliertsIQR.select(\"ingreso_laboral\").summary().show",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=49",
-              "$$hashKey": "object:3664"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902256563_556810679",
-      "id": "paragraph_1595902256563_556810679",
-      "dateCreated": "2020-07-27T21:10:56-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:3386",
-      "text": "val dataSinOutliertsIQR = dfIngresoLaboral.where($\"ingreso_laboral\" > inferiorIQR && $\"ingreso_laboral\" < superiorIQR)\ndataSinOutliertsIQR.select(\"ingreso_laboral\").summary().show",
-      "dateUpdated": "2020-07-27T21:12:15-0500",
-      "dateFinished": "2020-07-27T21:12:19-0500",
-      "dateStarted": "2020-07-27T21:12:15-0500",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -864,41 +638,39 @@
             "data": "+-------+------------------+\n|summary|   ingreso_laboral|\n+-------+------------------+\n|  count|            472900|\n|   mean|377.06883484880524|\n| stddev| 276.6314900863579|\n|    min|                 0|\n|    25%|               155|\n|    50%|               350|\n|    75%|               510|\n|    max|              1214|\n+-------+------------------+\n\n\u001b[1m\u001b[34mdataSinOutliertsIQR\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [ingreso_laboral: int]\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252339_1107611333",
+      "id": "paragraph_1595902256563_556810679",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:43"
     },
     {
+      "text": "%md\n<H3 align= \"center\" >Comparación de ambas aproximaxiones</H3>",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "text",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "colWidth": 12,
         "editorMode": "ace/mode/text",
+        "fontSize": 9,
+        "editorHide": true,
         "title": false,
-        "editorHide": true
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902335626_-853515829",
-      "id": "paragraph_1595902335626_-853515829",
-      "dateCreated": "2020-07-27T21:12:15-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:3570",
-      "dateUpdated": "2020-07-27T21:13:28-0500",
-      "dateFinished": "2020-07-27T21:13:22-0500",
-      "dateStarted": "2020-07-27T21:13:22-0500",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -908,54 +680,36 @@
           }
         ]
       },
-      "text": "%md\n<H3 align= \"center\" >Comparación de ambas aproximaxiones</H3>"
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252345_1247328593",
+      "id": "paragraph_1595902335626_-853515829",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:44"
     },
     {
       "text": "dataSinOutliertsStdDev.select(\"ingreso_laboral\")\n                      .summary()\n                      .show\n",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27T21:14:04-0500",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 6,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "colWidth": 6,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=50",
-              "$$hashKey": "object:3954"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902402640_-497098057",
-      "id": "paragraph_1595902402640_-497098057",
-      "dateCreated": "2020-07-27T21:13:22-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:3711",
-      "dateFinished": "2020-07-27T21:13:42-0500",
-      "dateStarted": "2020-07-27T21:13:38-0500",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -964,54 +718,37 @@
             "data": "+-------+-----------------+\n|summary|  ingreso_laboral|\n+-------+-----------------+\n|  count|           499962|\n|   mean|447.2481268576412|\n| stddev|408.0410531341489|\n|    min|                0|\n|    25%|              168|\n|    50%|              363|\n|    75%|              572|\n|    max|             2790|\n+-------+-----------------+\n\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252346_-1451202318",
+      "id": "paragraph_1595902402640_-497098057",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:45"
     },
     {
+      "text": "dataSinOutliertsIQR.select(\"ingreso_laboral\")\n                   .summary()\n                   .show",
       "user": "anonymous",
+      "dateUpdated": "2020-07-28T08:00:52-0500",
       "config": {
-        "colWidth": 6,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "colWidth": 6,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            {
-              "jobUrl": "http://davisalex22-virtualbox.local:4040/jobs/job?id=51",
-              "$$hashKey": "object:4081"
-            }
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1595902418788_66904003",
-      "id": "paragraph_1595902418788_66904003",
-      "dateCreated": "2020-07-27T21:13:38-0500",
-      "status": "FINISHED",
-      "focus": true,
-      "$$hashKey": "object:3814",
-      "text": "dataSinOutliertsIQR.select(\"ingreso_laboral\")\n                   .summary()\n                   .show",
-      "dateUpdated": "2020-07-27T21:14:38-0500",
-      "dateFinished": "2020-07-27T21:14:42-0500",
-      "dateStarted": "2020-07-27T21:14:38-0500",
       "results": {
         "code": "SUCCESS",
         "msg": [
@@ -1020,11 +757,19 @@
             "data": "+-------+------------------+\n|summary|   ingreso_laboral|\n+-------+------------------+\n|  count|            472900|\n|   mean|377.06883484880524|\n| stddev| 276.6314900863579|\n|    min|                 0|\n|    25%|               155|\n|    50%|               350|\n|    75%|               510|\n|    max|              1214|\n+-------+------------------+\n\n"
           }
         ]
-      }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595941252346_-1592207387",
+      "id": "paragraph_1595902418788_66904003",
+      "dateCreated": "2020-07-28T08:00:52-0500",
+      "status": "READY",
+      "$$hashKey": "object:46"
     }
   ],
   "name": "Notebook_AnalisisCuantitativo",
-  "id": "2FF9K5MN6",
+  "id": "2FF3ZNZXK",
   "defaultInterpreterGroup": "spark",
   "version": "0.9.0-preview1",
   "noteParams": {},
