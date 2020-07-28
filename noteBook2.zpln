@@ -1,0 +1,783 @@
+﻿{
+  "paragraphs": [
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595899659100_-219820196",
+      "id": "paragraph_1595899659100_-219820196",
+      "dateCreated": "2020-07-27T20:27:39-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:4802",
+      "text": " import org.apache.spark.sql.types._\nimport org.apache.spark.sql.functions._\nval myDataSchema = StructType(\n  Array(\n    StructField(\"id\",DecimalType(26, 0),true),\n    StructField(\"anio\",IntegerType,true),\n    StructField(\"mes\",IntegerType,true),\n    StructField(\"provincia\",IntegerType,true),\n    StructField(\"canton\",IntegerType,true),\n    StructField(\"area\",StringType,true),\n    StructField(\"genero\",StringType,true),\n    StructField(\"edad\",IntegerType,true),\n    StructField(\"estado_civil\",StringType,true),\n    StructField(\"nivel_de_instruccion\",StringType,true),\n    StructField(\"etnia\",StringType,true),\n    StructField(\"ingreso_laboral\",IntegerType,true),\n    StructField(\"condicion_actividad\",StringType,true),\n    StructField(\"sectorizacion\",StringType,true),\n    StructField(\"grupo_ocupacion\",StringType,true),\n    StructField(\"rama_actividad\",StringType,true),\n    StructField(\"factor_expansion\",DoubleType,true)\n  ));",
+      "dateUpdated": "2020-07-27T21:06:28-0500",
+      "dateFinished": "2020-07-27T20:28:36-0500",
+      "dateStarted": "2020-07-27T20:28:32-0500",
+      "title": "Definicion de esquema",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.types._\nimport org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mmyDataSchema\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.types.StructType\u001b[0m = StructType(StructField(id,DecimalType(26,0),true), StructField(anio,IntegerType,true), StructField(mes,IntegerType,true), StructField(provincia,IntegerType,true), StructField(canton,IntegerType,true), StructField(area,StringType,true), StructField(genero,StringType,true), StructField(edad,IntegerType,true), StructField(estado_civil,StringType,true), StructField(nivel_de_instruccion,StringType,true), StructField(etnia,StringType,true), StructField(ingreso_laboral,IntegerType,true), StructField(condicion_actividad,StringType,true), StructField(sectorizacion,StringType,true), StructField(grupo_ocupacion,StringType,true), StructField(ram..."
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595899712422_-2134373864",
+      "id": "paragraph_1595899712422_-2134373864",
+      "dateCreated": "2020-07-27T20:28:32-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:4880",
+      "text": "val data = spark\n\t  .read\n\t  .schema(myDataSchema)\n\t  .option(\"header\",\"true\")\n\t  .option(\"delimiter\",\",\")\n\t  .csv(\"/home/erick/Descargas/datapracticum.csv\")",
+      "dateUpdated": "2020-07-27T21:07:01-0500",
+      "dateFinished": "2020-07-27T20:28:57-0500",
+      "dateStarted": "2020-07-27T20:28:53-0500",
+      "title": "Importacion",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdata\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [id: decimal(26,0), anio: int ... 15 more fields]\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=0",
+              "$$hashKey": "object:6901"
+            },
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=1",
+              "$$hashKey": "object:6902"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595899733815_1144022504",
+      "id": "paragraph_1595899733815_1144022504",
+      "dateCreated": "2020-07-27T20:28:53-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:4977",
+      "text": "data.groupBy(\"anio\").pivot(\"genero\").avg(\"ingreso_laboral\").orderBy(\"anio\").show",
+      "dateUpdated": "2020-07-27T21:07:28-0500",
+      "dateFinished": "2020-07-27T20:36:19-0500",
+      "dateStarted": "2020-07-27T20:35:06-0500",
+      "title": "Promedio de sueldos por anio",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----+-----------------+------------------+\n|anio|       1 - Hombre|         2 - Mujer|\n+----+-----------------+------------------+\n|2015| 525.729017201141|413.37933725963245|\n|2016|500.6389927926284| 400.8055874913773|\n|2017|534.7919513488043|429.84469644902634|\n|2018|540.8849734946309| 446.5279775525771|\n|2019|520.5119387755102|442.33701966636465|\n+----+-----------------+------------------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=2",
+              "$$hashKey": "object:6929"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595899754699_-1477028973",
+      "id": "paragraph_1595899754699_-1477028973",
+      "dateCreated": "2020-07-27T20:29:14-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5071",
+      "text": "data.groupBy(\"genero\").count().orderBy(\"genero\").show()",
+      "dateUpdated": "2020-07-27T21:08:32-0500",
+      "dateFinished": "2020-07-27T20:38:50-0500",
+      "dateStarted": "2020-07-27T20:38:31-0500",
+      "title": "Conteo de genero en la data",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+------+\n|    genero| count|\n+----------+------+\n|1 - Hombre|354178|\n| 2 - Mujer|268598|\n+----------+------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=3",
+              "$$hashKey": "object:6967"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595900311078_1439594975",
+      "id": "paragraph_1595900311078_1439594975",
+      "dateCreated": "2020-07-27T20:38:31-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5208",
+      "text": "data.groupBy(\"area\").count().orderBy(\"area\").show()",
+      "dateUpdated": "2020-07-27T21:09:19-0500",
+      "dateFinished": "2020-07-27T20:39:51-0500",
+      "dateStarted": "2020-07-27T20:39:32-0500",
+      "title": "Conteo de area en la data",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+------+\n|      area| count|\n+----------+------+\n|1 - Urbana|372614|\n| 2 - Rural|250162|\n+----------+------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=5",
+              "$$hashKey": "object:5601"
+            },
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=6",
+              "$$hashKey": "object:5602"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595900372485_-791553129",
+      "id": "paragraph_1595900372485_-791553129",
+      "dateCreated": "2020-07-27T20:39:32-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5315",
+      "text": " data.groupBy(\"estado_civil\").pivot(\"genero\").count().orderBy(\"estado_civil\").show()",
+      "dateUpdated": "2020-07-27T20:44:16-0500",
+      "dateFinished": "2020-07-27T20:42:01-0500",
+      "dateStarted": "2020-07-27T20:41:22-0500",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------+----------+---------+\n|     estado_civil|1 - Hombre|2 - Mujer|\n+-----------------+----------+---------+\n|    1 - Casado(a)|    142683|   101649|\n|  2 - Separado(a)|     14548|    24988|\n|3 - Divorciado(a)|      6061|    11839|\n|     4 - Viudo(a)|      5513|    13193|\n|  5 - Unión libre|     85974|    47718|\n|   6 - Soltero(a)|     99399|    69211|\n+-----------------+----------+---------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=7",
+              "$$hashKey": "object:5793"
+            },
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=8",
+              "$$hashKey": "object:5794"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595900446223_-52540918",
+      "id": "paragraph_1595900446223_-52540918",
+      "dateCreated": "2020-07-27T20:40:46-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5422",
+      "dateUpdated": "2020-07-27T20:49:35-0500",
+      "dateFinished": "2020-07-27T20:45:26-0500",
+      "dateStarted": "2020-07-27T20:44:49-0500",
+      "title": "Datos con la columna estado_civil",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------+-----+-----+-----+-----+-----+\n|     estado_civil| 2015| 2016| 2017| 2018| 2019|\n+-----------------+-----+-----+-----+-----+-----+\n|    1 - Casado(a)|54767|45454|56057|43841|44213|\n|  2 - Separado(a)| 7858| 6486| 8462| 8484| 8246|\n|3 - Divorciado(a)| 3649| 3000| 4070| 3554| 3627|\n|     4 - Viudo(a)| 3938| 3230| 3994| 3657| 3887|\n|  5 - Unión libre|28431|23801|29819|25868|25773|\n|   6 - Soltero(a)|34301|29189|38251|32796|34073|\n+-----------------+-----+-----+-----+-----+-----+\n\n"
+          }
+        ]
+      },
+      "text": " data.groupBy(\"estado_civil\").pivot(\"anio\").count().orderBy(\"estado_civil\").show()"
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=9",
+              "$$hashKey": "object:6972"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595900689311_1058400732",
+      "id": "paragraph_1595900689311_1058400732",
+      "dateCreated": "2020-07-27T20:44:49-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5630",
+      "text": "data.groupBy(\"nivel_de_instruccion\").count().orderBy(\"nivel_de_instruccion\").show()",
+      "dateUpdated": "2020-07-27T21:09:35-0500",
+      "dateFinished": "2020-07-27T20:50:21-0500",
+      "dateStarted": "2020-07-27T20:50:06-0500",
+      "title": "Conteo de nivel de instruccion en la data",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+------+\n|nivel_de_instruccion| count|\n+--------------------+------+\n|        01 - Ninguno| 22978|\n|02 - Centro de al...|  3360|\n|       04 - Primaria|201133|\n|05 - Educación Bá...| 28548|\n|     06 - Secundaria|176127|\n|07 - Educación  M...| 58749|\n|08 - Superior no ...| 11875|\n|09 - Superior Uni...|109625|\n|     10 - Post-grado| 10381|\n+--------------------+------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=20",
+              "$$hashKey": "object:6995"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595901006011_-216795555",
+      "id": "paragraph_1595901006011_-216795555",
+      "dateCreated": "2020-07-27T20:50:06-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5803",
+      "text": "data.groupBy(\"etnia\").count().orderBy(\"etnia\").show()",
+      "dateUpdated": "2020-07-27T21:09:59-0500",
+      "dateFinished": "2020-07-27T20:58:59-0500",
+      "dateStarted": "2020-07-27T20:58:45-0500",
+      "title": "Conteo de etnia en la data",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------+------+\n|              etnia| count|\n+-------------------+------+\n|       1 - Indígena| 75499|\n|2 - Afroecuatoriano|  8202|\n|          3 - Negro|  8451|\n|         4 - Mulato|  5936|\n|       5 - Montubio| 23247|\n|        6 - Mestizo|491923|\n|         7 - Blanco|  9209|\n|           8 - Otro|   309|\n+-------------------+------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=21",
+              "$$hashKey": "object:7026"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595901036047_466767244",
+      "id": "paragraph_1595901036047_466767244",
+      "dateCreated": "2020-07-27T20:50:36-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5900",
+      "text": "data.groupBy(\"condicion_actividad\").count().orderBy(\"condicion_actividad\").show()",
+      "dateUpdated": "2020-07-27T21:10:21-0500",
+      "dateFinished": "2020-07-27T21:00:03-0500",
+      "dateStarted": "2020-07-27T20:59:49-0500",
+      "title": "Conteo de condicion actividad en la data",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+------+\n| condicion_actividad| count|\n+--------------------+------+\n|1 - Empleo Adecua...|244176|\n|2 - Subempleo por...| 86530|\n|3 - Subempleo por...| 21021|\n|4 - Otro empleo n...|169496|\n|5 - Empleo no rem...| 73267|\n|6 - Empleo no cla...|  2025|\n|7 - Desempleo abi...| 21506|\n|8 - Desempleo oculto|  4755|\n+--------------------+------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=22",
+              "$$hashKey": "object:7055"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595901589292_1991901840",
+      "id": "paragraph_1595901589292_1991901840",
+      "dateCreated": "2020-07-27T20:59:49-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:6422",
+      "text": "data.groupBy(\"sectorizacion\").count().orderBy(\"sectorizacion\").show()",
+      "dateUpdated": "2020-07-27T21:12:14-0500",
+      "dateFinished": "2020-07-27T21:01:23-0500",
+      "dateStarted": "2020-07-27T21:01:09-0500",
+      "title": "Conteo de sectorizacion en la data",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+------+\n|       sectorizacion| count|\n+--------------------+------+\n|                null| 26261|\n|   1 - Sector Formal|281769|\n| 2 - Sector Informal|271189|\n|3 - Empleo Doméstico| 13239|\n|4 - No Clasificad...| 30318|\n+--------------------+------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=23",
+              "$$hashKey": "object:7085"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595901617410_-917064190",
+      "id": "paragraph_1595901617410_-917064190",
+      "dateCreated": "2020-07-27T21:00:17-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:6529",
+      "text": "data.groupBy(\"grupo_ocupacion\").count().orderBy(\"grupo_ocupacion\").show()",
+      "dateUpdated": "2020-07-27T21:12:39-0500",
+      "dateFinished": "2020-07-27T21:04:32-0500",
+      "dateStarted": "2020-07-27T21:04:17-0500",
+      "title": "Conteo de grupo ocupacion en la data",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+------+\n|     grupo_ocupacion| count|\n+--------------------+------+\n|                null| 26261|\n|01 - Personal dir...|  7633|\n|02 - Profesionale...| 48254|\n|03 - Técnicos y p...| 26440|\n|04 - Empleados de...| 21089|\n|05 - Trabajad. de...|121152|\n|06 - Trabajad. ca...|117823|\n|07 - Oficiales op...| 65391|\n|08 - Operadores d...| 40401|\n|09 - Trabajadores...|146286|\n|10 - Fuerzas Armadas|  2039|\n|99 - No especificado|     7|\n+--------------------+------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ericksito.local:4040/jobs/job?id=24",
+              "$$hashKey": "object:7126"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595901857526_-842824158",
+      "id": "paragraph_1595901857526_-842824158",
+      "dateCreated": "2020-07-27T21:04:17-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:6636",
+      "text": "data.groupBy(\"rama_actividad\").count().orderBy(\"rama_actividad\").show()",
+      "dateUpdated": "2020-07-27T21:14:32-0500",
+      "dateFinished": "2020-07-27T21:05:31-0500",
+      "dateStarted": "2020-07-27T21:05:17-0500",
+      "title": "Conteo de rama actividad en la data",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+------+\n|      rama_actividad| count|\n+--------------------+------+\n|                null| 26261|\n|01 - A. Agricultu...|193985|\n|02 - B. Explotaci...|  4817|\n|03 - C. Industria...| 58532|\n|04 - D. Suministr...|  1768|\n|05 - E. Distribuc...|  1745|\n|06 - F. Construcción| 34701|\n|07 - G. Comercio,...|100967|\n|08 - H. Transport...| 30997|\n|09 - I. Actividad...| 35158|\n|10 - J. Informaci...|  5497|\n|11 - K. Actividad...|  4367|\n|12 - L. Actividad...|  1216|\n|13 - M. Actividad...| 10334|\n|14 - N. Actividad...| 13169|\n|15 - O .Administr...| 24878|\n|   16 - P. Enseñanza| 26949|\n|17 - Q. Actividad...| 15115|\n|18 - R. Artes, en...|  3917|\n|19 - S. Otras act...| 15073|\n+--------------------+------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1595901917034_1509942223",
+      "id": "paragraph_1595901917034_1509942223",
+      "dateCreated": "2020-07-27T21:05:17-0500",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:6743"
+    }
+  ],
+  "name": "noteBook2",
+  "id": "2FFTQY9KJ",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/noteBook2"
+}
